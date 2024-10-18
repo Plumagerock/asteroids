@@ -9,6 +9,9 @@ def main():
 
     while True:
         screen.fill(000)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
 
 
 if __name__ == "__main__":
