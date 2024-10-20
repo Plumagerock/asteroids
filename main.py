@@ -12,6 +12,7 @@ def main():
 
     dt = 0
 
+    # game loop
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -21,9 +22,10 @@ def main():
         screen.fill("black")
 
         # draw player to screen
+        player.update(dt)
         player.draw(screen)
 
-        # update screen
+        # update graphics
         pygame.display.flip()
         
         # limit framerate to 60
