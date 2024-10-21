@@ -32,7 +32,7 @@ class Player(CircleShape):
 
     def shoot(self, dt):
         velocity = pygame.Vector2(0, 1).rotate(self.rotation) * SHOT_SPEED
-        new_shot = Shot(self.position.x, self.position.y, self.rotation, velocity)
+        Shot(self.position.x, self.position.y, self.rotation, velocity)
 
     def update(self, dt):
         keys = pygame.key.get_pressed()
